@@ -1,4 +1,4 @@
 
 public interface IFotos{
-    public String agregarFotos();
+    public void agregarFoto();
 }

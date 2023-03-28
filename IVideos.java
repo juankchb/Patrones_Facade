@@ -1,6 +1,6 @@
 
 public interface IVideos{
 
-    public String agregarVideo();
-    
+    public void agregarVideo();
+
 }
