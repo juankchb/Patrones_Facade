@@ -3,7 +3,7 @@ public class articulo {
     private String title;
        private String content;
        
-       public Article(String title, String content) {
+       public articulo(String title, String content) {
            this.title = title;
            this.content = content;
        }

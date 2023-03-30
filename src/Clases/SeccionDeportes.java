@@ -3,7 +3,7 @@ public class SeccionDeportes extends Seccion{
         super(name);
     }
     
-    public void addArticle(Article article, String select) {
+    public void addArticle(articulo article, String select) {
         if (select.equals("Deportes")) {
             super.addArticle(article);
         }
