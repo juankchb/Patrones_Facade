@@ -19,7 +19,7 @@ public class BasePagina implements Pagina {
         html.add("\n</head>\n<body>");
         
         for (Seccion section : sections) {
-            html.add("\n\t<header>\n\t\t<h1>Juan el despechado"+section.getNombre()+"</h1>");
+            html.add("\n\t<header>\n\t\t<h1>"+section.getNombre()+"</h1>");
             html.add("\n\t</header>");
             html.add("\n\t<section>");
             

@@ -10,6 +10,8 @@ public class FacadeWeb {
 
 		seccions.add(new SeccionDeportes("Deportes"));
 		seccions.add(new SeccionMusica("Musica"));
+
+		this.pagina = new BasePagina("Fake news", seccions);
     }
 
 	public String htmlShow() {
