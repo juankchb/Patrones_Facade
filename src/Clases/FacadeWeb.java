@@ -22,12 +22,13 @@ public class FacadeWeb {
 		seccions.add(seccion);
 
 		this.pagina = new BasePagina("Fake news", seccions);
+		guardarHtml(new BasePagina("Fake news", seccions));
     }
 
-	public void guardarHtml(){
+	public void guardarHtml(BasePagina pag){
 		guardarArchivos gA= new guardarArchivos();
-		gA.setArchivo(this.pagina.getHtml());
-		gA.escribirArchivo("./Html/html.html");
+		gA.setArchivo(pag.htmlShow());
+		gA.escribirArchivo("./src/Html/html.html");
 	}
 
 	/* 

@@ -4,19 +4,17 @@ import java.util.ArrayList;
 public class guardarArchivos {
     FileWriter fichero = null;
     PrintWriter pw = null;  
-    ArrayList<String> archivo = new ArrayList<String>();
+    String archivo;
 
-    public void setArchivo(ArrayList<String> lista){
-        archivo.addAll(lista);
+    public void setArchivo(String str){
+        this.archivo= str;
     }
 
     public void escribirArchivo(String ruta){
         try {
             fichero = new FileWriter(ruta);
             pw = new PrintWriter(fichero);
-            for (String string : archivo) {
-                pw.println(string);
-            }        
+            pw.println(archivo);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {

@@ -52,19 +52,8 @@ public class BasePagina implements Pagina {
         return ArraylistTOString(html).toString();
     }
 
-        
-
-    public ArrayList<String> getHtml() {
-        return html;
-    }
-
-    public void setHtml(ArrayList<String> html) {
-        this.html = html;
-    }
-
     public String ArraylistTOString(ArrayList<String> lista){
         String htmlF="";
-        setHtml(lista);
         for (String s : lista) {
         	htmlF+=s;
 		}
