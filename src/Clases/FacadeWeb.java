@@ -1,15 +1,20 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class FacadeWeb {
 
 	private Pagina pagina;
 
 	public FacadeWeb() {
-		List<Seccion> seccions = new ArrayList<>();
+		ArrayList<Seccion> seccions = new ArrayList<>();
 
-		seccions.add(new SeccionDeportes("Deportes"));
-		seccions.add(new SeccionMusica("Musica"));
+		Seccion seccion = new SeccionDeportes("Deportes");
+		seccion.addArticle(new articulo("Argentina Campeon del mundo","La seleción Argentina gano en penales ante francia en la final del mundo","Deportes"));
+
+		seccions.add(seccion);
+
+		seccion = new SeccionMusica("Musica");
+		seccion.addArticle(new articulo("Estereo Picnic","Este fin de semana se presentaron multiples artistas al estereo picnic","Musica"));
+		seccions.add(seccion);
 
 		this.pagina = new BasePagina("Fake news", seccions);
     }
