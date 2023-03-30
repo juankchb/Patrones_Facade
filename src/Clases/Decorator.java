@@ -6,7 +6,7 @@ public abstract class Decorator implements Pagina {
 	}
 
 	@Override
-	public String display() {
-		return pagina.display();
+	public String htmlShow() {
+		return pagina.htmlShow();
 	}
 }

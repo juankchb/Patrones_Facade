@@ -12,7 +12,7 @@ public class FacadeWeb {
 		seccions.add(new SeccionMusica("Musica"));
     }
 
-	public String display() {
-		return pagina.display();
+	public String htmlShow() {
+		return pagina.htmlShow();
 	}
  }

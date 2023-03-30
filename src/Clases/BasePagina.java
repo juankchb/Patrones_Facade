@@ -10,7 +10,7 @@ public class BasePagina implements Pagina {
         this.sections = sections;
     }
     
-    public String display() {
+    public String htmlShow() {
         ArrayList<String> html = new ArrayList<String>();
         html.add("<!DOCTYPE html>");
         html.add("\n<hmtl lang=en>");
