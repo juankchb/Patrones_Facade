@@ -1,10 +1,9 @@
 public class SeccionMusica extends Seccion {
-	  public SeccionMusica (String name) {
-	        super(name);
-	    }
+	public SeccionMusica (String name) {
+	    super(name);
+	}
 	    
-	    public void addSeccionMusica(Article article) {
-	        super.addArticle(article);
-	    }
+	public void addSeccionMusica(Article article) {
+	    super.addArticle(article);
 	}
 }
