@@ -2,6 +2,7 @@ public class WebGeneral extends Decorator {
 	public WebGeneral(Pagina pagina) {
 		super(pagina);
 	}
-public String display() {
-  
+	public String display() {
+		return "this.displaysuper()";
+	}
 }

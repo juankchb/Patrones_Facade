@@ -8,8 +8,11 @@ public class FacadeWeb {
 	public FacadeWeb() {
 		List<Seccion> seccions = new ArrayList<>();
 
-		seccions.add(new Deportes("Deportes"));
-		// Cambios
-		seccions.add(new Musica("Musica"));
+		seccions.add(new SeccionDeportes("Deportes"));
+		seccions.add(new SeccionMusica("Musica"));
     }
+
+	public String display() {
+		return pagina.display();
+	}
  }

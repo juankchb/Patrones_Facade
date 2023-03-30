@@ -3,7 +3,12 @@ public class SeccionMusica extends Seccion {
 	    super(name);
 	}
 	    
-	public void addSeccionMusica(Article article) {
-	    super.addArticle(article);
+	public void addSeccionMusica(articulo article,String str) {
+	    if (str.equals("Deportes")) {
+            super.addArticle(article);
+        }else{
+            System.out.println("No se agrego el articulo,ya que no es de la sección Musica");
+        }
+		
 	}
 }
