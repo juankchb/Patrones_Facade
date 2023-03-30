@@ -1,13 +1,11 @@
-package Contenidos;
-
 import java.util.List;
 import java.util.ArrayList;
 
-public class BasicWebpagina implements webpagina {
+public class BasePagina implements Pagina {
     private String title;
-    private List<Section> sections;
+    private List<Seccion> sections;
     
-    public BasicWebpagina(String title, List<Section> sections) {
+    public BasePagina(String title, List<Seccion> sections) {
         this.title = title;
         this.sections = sections;
     }
@@ -20,16 +18,16 @@ public class BasicWebpagina implements webpagina {
         html.add("\n\t<title>"+title+"</title>");
         html.add("\n</head>\n<body>");
         
-        for (Section section : sections) {
-            html.add("\n\t<header>\n\t\t<h1>Juan el despechado"+section.getName()+"</h1>");
+        for (Seccion section : sections) {
+            html.add("\n\t<header>\n\t\t<h1>Juan el despechado"+section.getNombre()+"</h1>");
             html.add("\n\t</header>");
             html.add("\n\t<section>");
             
-            for (Article article : section.getArticles()) {
+            for (articulo article : section.getArticles()) {
                 html.add("\n\t\t<article>");
                 html.add("\n\t\t\t<h2>"+article.getTitle()+"</h2>");
                 html.add("\n\t\t\t<p>"+article.getContent()+"</p>");
-                html.add("\n\t\t\t<p>By:"+article.getAuthor()+"</p>");
+                //html.add("\n\t\t\t<p>By:"+article.getAuthor()+"</p>");
                 html.add("\n\t\t</article>");
             }
             
