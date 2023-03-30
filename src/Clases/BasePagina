@@ -13,42 +13,38 @@ public class BasicWebpagina implements webpagina {
     }
     
     public String display() {
-        ArrayList<String> hmtl = new ArrayList<String>();
-        html.append("<!DOCTYPE html>");
-        html.append('\n<hmtl lang="en">');
-        html.append("\n<head>");
-        html.append("\n\t<title>"+title+"</title>");
-        html.append("\n</head>\n<body>");
+        ArrayList<String> html = new ArrayList<String>();
+        html.add("<!DOCTYPE html>");
+        html.add("\n<hmtl lang=en>");
+        html.add("\n<head>");
+        html.add("\n\t<title>"+title+"</title>");
+        html.add("\n</head>\n<body>");
         
         for (Section section : sections) {
-            html.append("\n\t<header>\n\t\t<h1>Juan el despechado"++"</h1>")
-            html.append("\n\t</header>")
-            html.append("\n\t</section>")
-            builder.append("<h1>");
-            builder.append(section.getName());
-            builder.append("</h1>");
-            builder.append("<ul>");
+            html.add("\n\t<header>\n\t\t<h1>Juan el despechado"+section.getName()+"</h1>");
+            html.add("\n\t</header>");
+            html.add("\n\t<section>");
             
             for (Article article : section.getArticles()) {
-                builder.append("<li>");
-                builder.append("<h2>");
-                builder.append(article.getTitle());
-                builder.append("</h2>");
-                builder.append("<p>");
-                builder.append(article.getContent());
-                builder.append("</p>");
-                builder.append("<p>");
-                builder.append("By: ");
-                builder.append(article.getAuthor());
-                builder.append("</p>");
-                builder.append("</li>");
+                html.add("\n\t\t<article>");
+                html.add("\n\t\t\t<h2>"+article.getTitle()+"</h2>");
+                html.add("\n\t\t\t<p>"+article.getContent()+"</p>");
+                html.add("\n\t\t\t<p>By:"+article.getAuthor()+"</p>");
+                html.add("\n\t\t</article>");
             }
             
-            builder.append("</ul>");
+            html.add("\n\t</section>");
         }
         
-        builder.append("</body></html>");
-        return builder.toString();
+        html.add("\n</body>\n</html>");
+
+        String htmlF="";
+        
+        for (String s : html) {
+        	htmlF+=s;
+		}
+        
+        return htmlF.toString();
     }
 
 }
