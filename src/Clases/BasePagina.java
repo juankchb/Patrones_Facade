@@ -1,6 +1,9 @@
 import java.util.List;
 import java.util.ArrayList;
 
+/*
+ * 
+ */
 public class BasePagina implements Pagina {
     private String title;
     private List<Seccion> sections;
@@ -52,6 +55,10 @@ public class BasePagina implements Pagina {
         return ArraylistTOString(html).toString();
     }
 
+    /*
+     * Método que pasa de Arraylist a string
+     * @return retorna el string
+     */
     public String ArraylistTOString(ArrayList<String> lista){
         String htmlF="";
         for (String s : lista) {

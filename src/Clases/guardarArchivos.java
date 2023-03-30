@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.ArrayList;
 
 public class guardarArchivos {
     FileWriter fichero = null;
@@ -14,6 +13,8 @@ public class guardarArchivos {
         try {
             fichero = new FileWriter(ruta);
             pw = new PrintWriter(fichero);
+
+            //Se escribe el archivo
             pw.println(archivo);
         } catch (Exception e) {
             e.printStackTrace();

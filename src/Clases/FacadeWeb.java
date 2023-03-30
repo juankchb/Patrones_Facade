@@ -25,6 +25,9 @@ public class FacadeWeb {
 		guardarHtml(new BasePagina("Fake news", seccions));
     }
 
+	/*
+	 * Metodo que guarda el html en la carpeta html
+	 */
 	public void guardarHtml(BasePagina pag){
 		guardarArchivos gA= new guardarArchivos();
 		gA.setArchivo(pag.htmlShow());
