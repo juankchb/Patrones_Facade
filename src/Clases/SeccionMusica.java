@@ -7,3 +7,5 @@ public class SeccionMusica extends Seccion {
 	        super.addArticle(article);
 	    }
 	}
+    
+}
