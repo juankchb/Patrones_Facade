@@ -4,6 +4,7 @@ import java.util.ArrayList;
 public class BasePagina implements Pagina {
     private String title;
     private List<Seccion> sections;
+    ArrayList<String> html;
     
     public BasePagina(String title, List<Seccion> sections) {
         this.title = title;
@@ -15,7 +16,7 @@ public class BasePagina implements Pagina {
      * @return retorna un string con el html ya creado
      */
     public String htmlShow() {
-        ArrayList<String> html = new ArrayList<String>();
+        html = new ArrayList<String>();
         html.add("<!DOCTYPE html>");
         html.add("\n<hmtl lang=en>");
 
@@ -46,14 +47,28 @@ public class BasePagina implements Pagina {
         }
         
         html.add("\n</body>\n</html>");//se cierra el boy y el html
-
-        String htmlF="";
         
-        for (String s : html) {
+        
+        return ArraylistTOString(html).toString();
+    }
+
+        
+
+    public ArrayList<String> getHtml() {
+        return html;
+    }
+
+    public void setHtml(ArrayList<String> html) {
+        this.html = html;
+    }
+
+    public String ArraylistTOString(ArrayList<String> lista){
+        String htmlF="";
+        setHtml(lista);
+        for (String s : lista) {
         	htmlF+=s;
 		}
-        
-        return htmlF.toString();
+        return htmlF;
     }
 
 }

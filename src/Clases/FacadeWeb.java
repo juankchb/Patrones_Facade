@@ -24,6 +24,12 @@ public class FacadeWeb {
 		this.pagina = new BasePagina("Fake news", seccions);
     }
 
+	public void guardarHtml(){
+		guardarArchivos gA= new guardarArchivos();
+		gA.setArchivo(this.pagina.getHtml());
+		gA.escribirArchivo("./Html/html.html");
+	}
+
 	/* 
 	 * Método que retorna el html creada de la pagina usada
 	*/
