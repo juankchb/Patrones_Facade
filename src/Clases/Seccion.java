@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Seccion {
+public abstract class Seccion {
 	private String nombre;
     private List<articulo> articulos;
     
@@ -10,7 +10,7 @@ public class Seccion {
         this.articulos = new ArrayList<>();
     }
     
-    public void addArticle(articulo article) {
+    protected void addArticle(articulo article) {
         articulos.add(article);
     }
 
@@ -22,5 +22,5 @@ public class Seccion {
         return nombre;
     }
 
-    
+    public abstract void addArticleSeccion(articulo article);
 }

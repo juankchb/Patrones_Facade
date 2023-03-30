@@ -3,8 +3,11 @@ public class SeccionDeportes extends Seccion{
         super(name);
     }
     
-    
-    public void addArticle(articulo article) {
+    /*
+     * Método que agrega un articulo si este pertenece a la sección de deportes
+     */
+    @Override
+    public void addArticleSeccion(articulo article) {
         if (super.getNombre().compareToIgnoreCase(article.getSeccion())==0) {
             super.addArticle(article);
         }else{
